@@ -1,10 +1,11 @@
 import Footer from "./Components/Footer"
-import Navbar from "./Components/Navbar"
-
+import Home from "./Components/Home"
+import Navbar from "./Components/navbar";
 function App() {
   return (
     <>
       <Navbar></Navbar>
+      <Home></Home>
       <h1 className='text-center mt-5 text-3xl'>Vite + React</h1>
       <h1 className='text-center mt-5 text-3xl'>Vite + React</h1>
       <h1 className='text-center mt-5 text-3xl'>Vite + React</h1>
@@ -16,4 +17,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
