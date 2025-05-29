@@ -67,7 +67,7 @@ const Navbar = () => {
         <div>
             {/* Sidebar for mobile/medium */}
             <div
-                className={`fixed top-0 left-0 h-full bg-linear-to-r from-amber-400 to-orange-500 text-black z-50 transition-transform duration-700 w-[50vw] ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:block md:translate-x-0 md:static md:shadow-none shadow-lg`}
+                className={`fixed top-0 left-0 h-full bg-linear-to-r from-amber-300 to-orange-600 text-black z-50 transition-transform duration-700 w-[50vw] ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:block md:translate-x-0 md:static md:shadow-none shadow-lg`}
                 style={{ maxWidth: '400px' }}
             >
                 {/* Close button for mobile/medium */}
@@ -89,15 +89,15 @@ const Navbar = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </button>
-                    <a href="#" className="text-3xl md:text-4xl font-medium">Italiano</a>
+                    <a href="#" className="text-3xl md:text-4xl font-medium  bg-gradient-to-r from-amber-300 to-orange-600 text-transparent bg-clip-text">Italiano</a>
                 </div>
                 <div className="navbar-center hidden md:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 text-xl">
                         {listItems}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a href="#" className="btn bg-white hover:bg-linear-to-r from-amber-400 to-orange-500 text-black cursor-pointer">Sign In</a>
+                    <a href="#" className="btn rounded-xl px-5 bg-white hover:bg-linear-to-r from-amber-300 to-orange-600 text-black cursor-pointer">Sign In</a>
                 </div>
             </div>
         </div>

@@ -12,10 +12,11 @@ const Home = () => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title text-5xl font-semibold">We Deliver the Best Taste of Food</h2>
-                    <p className="text-xl">Experience our expertly crafted dishes, made from the freshest ingredients.</p>
-                    <div className="card-actions justify-end">
+                    <span className="text-xl">Experience our expertly crafted dishes, made from the freshest ingredients.</span>
+                    <div className="">
                         <form action="">
-                            <button className="btn hover:bg-linear-to-r from-amber-400 to-orange-500">search</button>
+                            <input className="bg-white p-5 rounded-4xl text-black w-full" type="text" name="" id="" />
+                            <button className="btn bg-orange-600 rounded-4xl p-5 text-white text-xl font-extralight md:absolute md:right-[3vw] md:top-31">search</button>
                         </form>
                     </div>
                 </div>
