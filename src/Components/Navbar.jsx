@@ -47,14 +47,14 @@ const Navbar = () => {
             <li><a href="#" className="hover:text-amber-400 lg:px-6">About Us</a></li>
             <li className="relative group">
                 <a href="#" className="hover:text-amber-400 lg:px-6 cursor-pointer">Pages</a>
-                <ul className="absolute left-0 top-full min-w-[10rem] bg-white text-black px-0 py-2 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-500 z-20">
+                <ul className="absolute left-0 top-17 min-w-[10rem] bg-white text-black px-0 py-2 rounded shadow-lg opacity-0 group-hover:top-12 group-hover:opacity-100 group-hover:visible transition-all duration-500 z-20">
                     <li><a href="#" className="hover:text-white dark:text-black hover:bg-gray-500">Submenu1 p1</a></li>
                     <li><a href="#" className="hover:text-white dark:text-black hover:bg-gray-500">Submenu2 p1</a></li>
                 </ul>
             </li>
             <li className="relative group">
                 <a href="#" className="hover:text-amber-400 lg:px-6 cursor-pointer">Blog</a>
-                <ul className="absolute left-0 top-full min-w-[10rem] bg-white text-black px-0 py-2 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-500 z-20">
+                <ul className="absolute left-0 top-17 min-w-[10rem] bg-white text-black px-0 py-2 rounded shadow-lg opacity-0 group-hover:top-12 group-hover:opacity-100 group-hover:visible transition-all duration-500 z-20">
                     <li><a href="#" className="hover:text-white dark:text-black hover:bg-gray-500">Submenu1 p2</a></li>
                     <li><a href="#" className="hover:text-white dark:text-black hover:bg-gray-500">Submenu2 p2</a></li>
                 </ul>

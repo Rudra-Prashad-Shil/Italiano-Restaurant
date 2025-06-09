@@ -6,12 +6,6 @@ function App() {
     <>
       <Navbar></Navbar>
       <Home></Home>
-      <h1 className='text-center mt-5 text-3xl'>Vite + React</h1>
-      <h1 className='text-center mt-5 text-3xl'>Vite + React</h1>
-      <h1 className='text-center mt-5 text-3xl'>Vite + React</h1>
-      <h1 className='text-center mt-5 text-3xl'>Vite + React</h1>
-      <h1 className='text-center mt-5 text-3xl'>Vite + React</h1>
-      <h1 className='text-center mt-5 text-3xl'>Vite + React</h1>
       <Footer></Footer>
     </>
   )
