@@ -6,6 +6,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <Home></Home>
+      <h1>new Push</h1>
       <Footer></Footer>
     </>
   )
