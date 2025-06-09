@@ -1,10 +1,18 @@
-import Banner from '../assets/Banner.jpg';
+import Banner from '../assets/Banner-compressed.jpg';
+import FeaturedRestaurants from './FeaturedRestaurants';
+import FirstOrderBanner from './FirstOrderBanner';
+import LatestPosts from './LatestPosts';
+import Newsletter from './Newsletter';
+import OrderAppBanner from './OrderAppBanner';
+import PopularDishes from './PopularDishes';
+import Testimonials from './Testimonials';
+import WhyChooseUs from './WhyChooseUs';
 
 const Home = () => {
     return (
         <div>
             {/* Banner */}
-            <div className="card image-full min-h-[550px] max-h-[850px] shadow-sm brightness-200 relative">
+            <section className="card image-full min-h-[550px] max-h-[750px] shadow-sm brightness-200 relative">
                 <figure>
                     <img
                         src={Banner}
@@ -21,9 +29,9 @@ const Home = () => {
                         </form>
                     </div>
                 </div>
-            </div>
+            </section>
             {/* Floating Cards */}
-            <div className="relative -mt-10 flex justify-center">
+            <section className="relative -mt-10 flex justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4">
                     <div className="card max-w-96 bg-gray-800 card-md shadow-sm mx-auto">
                         <div className="card-body p-10">
@@ -47,7 +55,16 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <FeaturedRestaurants></FeaturedRestaurants>
+            <WhyChooseUs></WhyChooseUs>
+            <FirstOrderBanner></FirstOrderBanner>
+            <Testimonials></Testimonials>
+            <PopularDishes></PopularDishes>
+            <OrderAppBanner></OrderAppBanner>
+            <Newsletter></Newsletter>
+            <LatestPosts></LatestPosts>
+            
         </div>
     );
 };
