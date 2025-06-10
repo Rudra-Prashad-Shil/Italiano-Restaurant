@@ -6,6 +6,8 @@ import Home from './Components/Home.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ErrorPage from './Components/ErrorPage.jsx'
 import AboutUs from './Components/AboutUs.jsx'
+import SignIn from './Components/SignInSignup/SignIn.jsx'
+import SignUp from './Components/SignInSignup/SignUp.jsx'
 
 const router =  createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router =  createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs></AboutUs>
+      },
+      {
+        path: "/signin",
+        element: <SignIn></SignIn>
+      },
+      {
+        path: "//signup",
+        element: <SignUp></SignUp>
       }
     ]
   }

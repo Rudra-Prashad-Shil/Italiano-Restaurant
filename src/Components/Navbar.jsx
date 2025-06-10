@@ -86,11 +86,12 @@ const Navbar = () => {
                 style={{ maxWidth: '400px' }}
             >
                 {/* Close button for mobile/medium */}
-                <div className="flex md:hidden justify-end p-4">
-                    <button onClick={() => setIsMenuOpen(false)} className="text-3xl font-semibold">x</button>
+                <div className="bg-black flex md:hidden justify-between p-6.5">
+                    <a href="#" className="text-3xl md:text-4xl font-medium  bg-gradient-to-r from-amber-300 to-orange-600 text-transparent bg-clip-text" onClick={() => setIsMenuOpen(false)}>Italiano</a>
+                    <button onClick={() => setIsMenuOpen(false)} className="text-3xl font-semibold text-white">x</button>
                 </div>
                 {/* Only show menu on md and below */}
-                <nav className="md:hidden">{mobileMenu}</nav>
+                <nav className="md:hidden mt-3">{mobileMenu}</nav>
             </div>
 
             <div className="navbar bg-black text-white shadow-sm md:p-10 p-6">
@@ -112,7 +113,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a href="#" className="btn rounded-xl px-5 bg-white hover:bg-linear-to-r from-amber-300 to-orange-600 text-black cursor-pointer">Sign In</a>
+                    <NavLink to="/signin" className="btn rounded-xl px-5 bg-white hover:bg-linear-to-r from-amber-300 to-orange-600 text-black cursor-pointer">Sign In</NavLink>
                 </div>
             </div>
         </div>
