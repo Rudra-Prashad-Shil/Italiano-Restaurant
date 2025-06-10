@@ -21,7 +21,7 @@ const featured = [
   },
 ];
 
-const FeaturedRestaurants = () => (
+const HomeFeaturedRestaurants = () => (
   <section className="max-w-6xl mx-auto mt-24 px-4">
     <div className="text-center mb-10">
       <span className="text-amber-500 text-xl font-semibold block mb-2">Featured</span>
@@ -59,4 +59,4 @@ const FeaturedRestaurants = () => (
   </section>
 );
 
-export default FeaturedRestaurants;
+export default HomeFeaturedRestaurants;

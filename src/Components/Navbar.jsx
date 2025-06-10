@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
     const [openSubmenu, setOpenSubmenu] = useState(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const sidebarRef = useRef(null);
+
+    // Close sidebar when clicking outside
+    useEffect(() => {
+        if (!isMenuOpen) return;
+        const handleClickOutside = (event) => {
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+                setIsMenuOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [isMenuOpen]);
 
     const mobileMenu =
         <ul className="px-4">
-            <li className="pb-4 text-xl"><a href="#">Home</a></li>
-            <li className="pb-4 text-xl"><a href="#">About Us</a></li>
+            <li className="pb-4 text-xl"><NavLink to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink></li>
+            <li className="pb-4 text-xl"><NavLink to="/about-us" onClick={() => setIsMenuOpen(false)}>About Us</NavLink></li>
             <li className="pb-4 text-xl">
                 <div
                     className="flex items-center justify-between cursor-pointer"
@@ -18,8 +32,8 @@ const Navbar = () => {
                 </div>
                 {openSubmenu === 'Pages' && (
                     <ul className="pl-4 py-2">
-                        <li><a href="#">Submenu1 p1</a></li>
-                        <li><a href="#">Submenu2 p1</a></li>
+                        <li><a href="#" onClick={() => setIsMenuOpen(false)}>Submenu1 p1</a></li>
+                        <li><a href="#" onClick={() => setIsMenuOpen(false)}>Submenu2 p1</a></li>
                     </ul>
                 )}
             </li>
@@ -33,18 +47,18 @@ const Navbar = () => {
                 </div>
                 {openSubmenu === 'Blog' && (
                     <ul className="pl-4 py-2">
-                        <li><a href="#">Submenu1 p2</a></li>
-                        <li><a href="#">Submenu2 p2</a></li>
+                        <li><a href="#" onClick={() => setIsMenuOpen(false)}>Submenu1 p2</a></li>
+                        <li><a href="#" onClick={() => setIsMenuOpen(false)}>Submenu2 p2</a></li>
                     </ul>
                 )}
             </li>
-            <li className="pb-4 text-xl"><a href="#">Contact Us</a></li>
+            <li className="pb-4 text-xl"><a href="#" onClick={() => setIsMenuOpen(false)}>Contact Us</a></li>
         </ul>;
 
     const listItems = (
         <>
-            <li><a href="#" className="hover:text-amber-400 lg:px-6">Home</a></li>
-            <li><a href="#" className="hover:text-amber-400 lg:px-6">About Us</a></li>
+            <li><NavLink to="/" className="hover:text-amber-400 lg:px-6">Home</NavLink></li>
+            <li><NavLink to="/about-us" className="hover:text-amber-400 lg:px-6">About Us</NavLink></li>
             <li className="relative group">
                 <a href="#" className="hover:text-amber-400 lg:px-6 cursor-pointer">Pages</a>
                 <ul className="absolute left-0 top-17 min-w-[10rem] bg-white text-black px-0 py-2 rounded shadow-lg opacity-0 group-hover:top-12 group-hover:opacity-100 group-hover:visible transition-all duration-500 z-20">
@@ -67,7 +81,8 @@ const Navbar = () => {
         <div>
             {/* Sidebar for mobile/medium */}
             <div
-                className={`fixed top-0 left-0 h-full bg-linear-to-r from-amber-300 to-orange-600 text-black z-50 transition-transform duration-700 w-[50vw] ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:block md:translate-x-0 md:static md:shadow-none shadow-lg`}
+                ref={sidebarRef}
+                className={`fixed top-0 left-0 h-full bg-gradient-to-r from-amber-300 to-orange-600 text-black z-50 transition-transform duration-700 w-[50vw] ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:block md:translate-x-0 md:static md:shadow-none shadow-lg`}
                 style={{ maxWidth: '400px' }}
             >
                 {/* Close button for mobile/medium */}
