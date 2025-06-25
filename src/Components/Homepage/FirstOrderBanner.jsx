@@ -1,6 +1,14 @@
 const FirstOrderBanner = () => (
-  <section className="bg-gray-900 text-white py-16 px-4 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto rounded-3xl my-12 overflow-hidden relative">
-    <div className="flex-1 z-10">
+  <section
+    className="text-white flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto rounded-3xl my-12 overflow-hidden relative"
+    style={{
+      backgroundImage: "url('https://images.unsplash.com/photo-1627461985459-51600559fffe?auto=format&fit=crop&w=1200&q=80')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}
+  >
+    <div className="flex-1 z-10 bg-gray-900/40 py-16 px-8 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-extrabold mb-4 font-serif">
         Make Your First Order And Get <span className="text-amber-400">50% Off</span>
       </h2>
@@ -12,12 +20,6 @@ const FirstOrderBanner = () => (
         Order Products
       </button>
     </div>
-    <img
-      src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80"
-      alt="Pizza"
-      className="w-80 md:w-96 rounded-2xl shadow-lg object-cover md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2"
-      style={{ maxHeight: 320 }}
-    />
   </section>
 );
 
